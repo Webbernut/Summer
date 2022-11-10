@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/content/content_1.js"></script>
+    <script src="script/content/content_2.js"></script>
+    <style>
+        @import url("assets/header.css");
+		@import url("assets/content.css");
+		@import url("assets/footer.css");
+		@import url("assets/index.css");
+        svg {
+            width: 29.297vw;
+        }
+        .svg{
+            width: 29.297vw;
+            height: 4.883vw;
+        }
+        .draw{
+            stroke: white;
+            stroke-width: 0.073vw;
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3000;
+            animation: animate 10s forwards;
+        }
+        @keyframes animate {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="up" id="up" onclick="up()">
+        <p class="arrow">&#8593</p>
+    </div>
+    <header class="head">
+        <div class="head__menu">
+            <div class="head_submenu">
+                <a href="#" class="head__submenu_item">HOME</a>
+                <a href="#" class="head__submenu_item">ABOUT</a>
+                <a href="#" class="head__submenu_item">SHOP</a>
+                <a href="#" class="head__submenu_item">CONTACT</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head__block"> 
+                <div class="head__content">
+                    <div class="summer_circle" onmouseover="summerOn()" onmouseout="summerOff()">
+                        <div class="summer_circle__item">
+                            <p class="summer_circle__header">SUMMER</p>
+                            <svg viewBox="21.088 45.973 456.558 84.984" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" class="svg">
+                                <defs>
+                                  <style bx:fonts="Monoton">@import url(https://fonts.googleapis.com/css2?family=Monoton%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+                                </defs>
+                                <text style="fill: transparent; font-family: Monoton; font-size: 89px; white-space: pre;" x="25.352" y="124.794" class="draw">WEBSITE</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <script>
+                        function summerOn(){
+                            document.querySelector(".summer_circle").style.backgroundColor = "rgb(153, 14, 59, 1)"
+                        } 
+                        function summerOff(){
+                            document.querySelector(".summer_circle").style.backgroundColor = "rgb(153, 14, 59, 0.8)"
+                        } 
+                    </script>
+                    <div class="template">
+                        <p class="template__header">FULL TEMPLATE</p>
+                        <div class="line"></div>
+                        <p class="template__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna essentiale oculis invisum aliqua. Ut enim.</p>
+                        <a href="#" class="template__button">read more</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="special">
+            <div class="special__block">
+                <img src="pictures/icon/white_circle.png" alt="" class="special__circle">
+                <div class="special__block_text">
+                    <h1 class="special__header">Special guests this year</h1>
+                    <p class="special__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="container">
+                <div id="group__column">
+                    <div class="group__item" id="item_1" onmouseover="item_on(1)" onmouseout="item_off(1)">
+                        <img src="pictures/icon/triagle.png" alt="" class="group__triagle">
+                        <p class="group__header">New music</p>
+                        <p class="group__text">Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne ullamco laboris nisi ut aliqolore.</p>
+                    </div>
+                    <div class="group__item" id="item_2" onmouseover="item_on(2)" onmouseout="item_off(2)">
+                        <img src="pictures/icon/triagle.png" alt="" class="group__triagle">
+                        <p class="group__header">New groups</p>
+                        <p class="group__text">Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne ullamco laboris nisi ut aliqolore.</p>
+                    </div>
+                    <div class="group__item" id="item_3" onmouseover="item_on(3)" onmouseout="item_off(3)">
+                        <img src="pictures/icon/triagle.png" alt="" class="group__triagle">
+                        <p class="group__header">New themes</p>
+                        <p class="group__text">Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit, tation omne ullamco laboris nisi ut aliqolore.</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function item_on(num){
+                    document.getElementById(`item_${num}`).style.border = "2px solid rgb(255,255,255,1)";
+                }
+                function item_off(num){
+                    document.getElementById(`item_${num}`).style.border = "2px solid rgb(255,255,255,0.1)";
+                }
+            </script>   
+        </div>
+        <div class="priorities">
+            <div class="container">
+                <div class="priorities__block_text">
+                    <h1 class="priorities__header">Priorities go first</h1>
+                    <p class="priorities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </p>
+                </div>
+                <div class="priorities__column">
+                    <div class="priorities__item priorities__item_1">
+                        <p class="priorities__item_header">company</p>
+                        <p class="priorities__item_text">“Lorem ipsum dolor<br>sit amet, consectetur<br>adipisicing elit sed do”.</p>
+                        <div class="priorities__block_accounts">
+                            <img src="pictures/icon/white_circle_big.png" alt="" class="priorities__png">
+                            <div class="priorities__name_accounts">
+                                <p class="priorities__name_header">ADAM JHOHNS</p>
+                                <p class="priorities__name_text">account manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priorities__item priorities__item_2">
+                        <p class="priorities__item_header">company</p>
+                        <p class="priorities__item_text">“Lorem ipsum dolor<br>sit amet, consectetur<br>adipisicing elit sed do”.</p>
+                        <div class="priorities__block_accounts">
+                            <img src="pictures/icon/white_circle_big.png" alt="" class="priorities__png">
+                            <div class="priorities__name_accounts">
+                                <p class="priorities__name_header">ADAM JHOHNS</p>
+                                <p class="priorities__name_text">account manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priorities__item priorities__item_3">
+                        <p class="priorities__item_header">company</p>
+                        <p class="priorities__item_text">“Lorem ipsum dolor<br>sit amet, consectetur<br>adipisicing elit sed do”.</p>
+                        <div class="priorities__block_accounts">
+                            <img src="pictures/icon/white_circle_big.png" alt="" class="priorities__png">
+                            <div class="priorities__name_accounts">
+                                <p class="priorities__name_header">ADAM JHOHNS</p>
+                                <p class="priorities__name_text">account manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stars"></div>
+        <div class="exactly">
+            <div class="container">
+                <div class="exactly__block_text">
+                    <p class="exactly__header">What exactly do we do</p>
+                    <p class="exactly__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <div class="line exactly__line"></div>
+                    <div class="exactly__block_link">
+                        <a href="#" class="exactly__link">Project</a>
+                        <a href="#" class="exactly__link">Travel</a>
+                        <a href="#" class="exactly__link">Mission</a>
+                        <a href="#" class="exactly__link">Photos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cloud"></div>
+        <div class="dop_info">
+            <div class="container">
+                <div class="dop_info__block_text">
+                    <div class="line dop_info__line"></div>
+                    <p class="dop_indo_sim">&#8220</p>
+                    <p class="dop_info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <p class="dop_info__name">David Johnson</p>
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <div class="container">
+                <div class="date__block_text">
+                    <p class="date__header">Some of our numbers</p>
+                    <div class="date__column">
+                        <div class="date__item date__item_2018">
+                            <p class="date__text">Lorem ipsum dolor sit amet consectetur</p>
+                            <p class="date__text_date">2018</p>
+                            <p class="date__signature">LOREM IPSUM</p>
+                        </div>
+                        <div class="date__item date__item_2019">
+                            <p class="date__text">Lorem ipsum dolor sit amet consectetur</p>
+                            <p class="date__text_date">2019</p>
+                            <p class="date__signature">LOREM IPSUM</p>
+                        </div>
+                        <div class="date__item date__item_2020">
+                            <p class="date__text">Lorem ipsum dolor sit amet consectetur</p>
+                            <p class="date__text_date">2020</p>
+                            <p class="date__signature">LOREM IPSUM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="august">
+            <div class="container">
+                <div class="august__column">
+                    <div class="august__item">
+                        <div class="august__wrapper_text">
+                        <div class="august__block_text august__block_text_1">
+                            <p class="august__date">Projects / 20th August</p>
+                            <p class="august__header">Something new has just arrived</p>
+                            <p class="august__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.</p>
+                        </div>
+                    </div>
+                        <img src="pictures/png/august__1.png" alt="" class="august__png_1">
+                    </div>
+                    <div class="august__item">
+                        <img src="pictures/png/august__2.png" alt="" class="august__png_2">
+                        <div class="august__wrapper_text">
+                        <div class="august__block_text august__block_text_2">
+                            <p class="august__date">Projects / 20th August</p>
+                            <p class="august__header">Something new has just arrived</p>
+                            <p class="august__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="august__item">
+                        <div class="august__wrapper_text">
+                        <div class="august__block_text august__block_text_3">
+                            <p class="august__date">Projects / 20th August</p>
+                            <p class="august__header">Something new has just arrived</p>
+                            <p class="august__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v architecto beatae vitae dicta sunt es. omne essentiale dolor liquam.</p>
+                        </div>
+                    </div>
+                        <img src="pictures/png/august__3.png" alt="" class="august__png_3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trips">
+            <div class="container">
+                <div class="trips__column">
+                    <div class="trips__item">
+                        <div class="trips__line trips__line_1"></div>
+                        <p class="trips__text trips__text_1">Lorem ipsum dolor sit<br>Trips / 16th March, 2019</p>
+                    </div>
+                    <div class="trips__item">
+                        <div class="trips__line trips__line_2"></div>
+                        <p class="trips__text trips__text_2">Lorem ipsum dolor sit<br>Trips / 16th March, 2019</p>
+                    </div>
+                    <div class="trips__item">
+                        <div class="trips__line trips__line_3"></div>
+                        <p class="trips__text trips__text_3">Lorem ipsum dolor sit<br>Trips / 16th March, 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="network">
+            <div class="container">
+                <div class="network__block_text">
+                    <p class="network_sim">&#8220</p>
+                    <p class="network__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                    <p class="network__signature">David Johnson</p>
+                    <div class="network__block_link">
+                        <a href="#" class="network__link"><img src="pictures/icon/facebook.png" alt="" class="network__png"></a>
+                        <a href="#" class="network__link"><img src="pictures/icon/twitter.png" alt="" class="network__png"></a>
+                        <a href="#" class="network__link"><img src="pictures/icon/instagram.png" alt="" class="network__png"></a>
+                        <a href="#" class="network__link"><img src="pictures/icon/pinterest.png" alt="" class="network__png"></a>
+                        <a href="#" class="network__link"><img src="pictures/icon/google_plus.png" alt="" class="network__png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__column">
+                <div class="footer__item">
+                    <p class="footer__header">ABOUT</p>
+                    <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ultimam quantum</p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item_wrapper">
+                    <div class="footer__sub_item">
+                        <p class="footer__header">ABOUT</p>
+                        <a href="#" class="footer__list">Team</a>
+                        <a href="#" class="footer__list">Join us</a>
+                        <a href="#" class="footer__list">Ethic</a>
+                        <a href="#" class="footer__list">Goals</a>
+                    </div>
+                    <div class="footer__sub_item">
+                        <p class="footer__header">ABOUT</p>
+                        <a href="#" class="footer__list">Team</a>
+                        <a href="#" class="footer__list">Join us</a>
+                        <a href="#" class="footer__list">Ethic</a>
+                        <a href="#" class="footer__list">Goals</a>
+                    </div>
+                    <div class="footer__sub_item">
+                        <p class="footer__header">ABOUT</p>
+                        <a href="#" class="footer__list">Team</a>
+                        <a href="#" class="footer__list">Join us</a>
+                        <a href="#" class="footer__list">Ethic</a>
+                        <a href="#" class="footer__list">Goals</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- P.S. gang time to kill -->
+</body>
+</html>

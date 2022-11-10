@@ -1,0 +1,88 @@
+.head{
+    background: url(../pictures/background/header.png);
+    height: 68vw;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.head__menu{
+    padding-top: 2.930vw;
+    margin-bottom: 8.789vw;
+    width: 80vw;
+    padding-left: 9vw;
+}
+.head_submenu{
+    display: flex;
+    justify-content: space-between;
+    width: 35vw;
+}
+.head__submenu_item, .logo{
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+    font-weight: 700;
+}
+.head__submenu_item{
+    margin: 0 10px 0 10px;
+}
+.summer_circle{
+    width: 36.621vw;
+    height: 36.621vw;
+    background-color: rgb(153, 14, 59, 0.8);
+    border-radius: 50%;
+    transition: background-color 0.5s;
+}
+.summer_circle__item{
+    text-align: center;
+    margin-top: 12.695vw;
+}
+.summer_circle__header{
+    font-size: 4.5vw;
+    color: white;
+    font-weight: 500;
+}
+.head__content{
+    display: flex;
+    justify-content: space-between;
+}
+.template{
+    margin-top: 15.625vw;
+    color: white;
+    width: 34.668vw;
+    margin-right: 0.977vw;
+    animation: tempalate_opacity 1s forwards;
+    opacity: 0;
+}
+@keyframes tempalate_opacity{
+    to{
+        margin-right: 3.906vw;
+        opacity: 1;
+    }
+}
+.template__header{
+    font-size: 4vw;
+    font-weight: 600;
+}
+.line{
+    width: 9.766vw;
+    height: 0.488vw;
+    float: right;
+    background-color: white;
+    margin: 1.221vw 0 1.221vw 0;
+}
+.template__text{
+    float: right;
+    font-size: 1.5vw;
+    text-align: right;
+    font-weight: 500;
+}
+.template__button{
+    float: right;
+    text-decoration: none;
+    background-color: white;
+    font-size: 1.7vw;
+    padding: 0.488vw 3.418vw 0.488vw 3.418vw;
+    color: #100667;
+    margin-top: 3.418vw;
+    font-weight: 500;
+}
